@@ -4,6 +4,7 @@ import { canStart, canStop } from "../../../entities/virtual-machine";
 import { StartVmButton } from "../../../features/start-vm";
 import { StopVmButton } from "../../../features/stop-vm";
 import { DeleteVmButton } from "../../../features/delete-vm";
+import { ConsoleButton } from "../../../features/vm-console";
 import styles from "./vm-list-table.module.scss";
 
 interface VmListTableProps {
@@ -26,6 +27,7 @@ export const VmListTable = ({ vms, onChanged }: VmListTableProps) => {
             <>
               {canStart(vm) && <StartVmButton vm={vm} onStart={onChanged} />}
               {canStop(vm) && <StopVmButton vm={vm} onStop={onChanged} />}
+              <ConsoleButton vm={vm} />
               <DeleteVmButton vm={vm} onDelete={onChanged} />
             </>
           }

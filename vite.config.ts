@@ -8,6 +8,10 @@ export default defineConfig({
   resolve: {
     alias: {
       "@app": resolve(__dirname, "app/javascript/app"),
+      "@novnc/novnc/core/rfb.js": resolve(
+        __dirname,
+        "node_modules/@novnc/novnc/core/rfb.js",
+      ),
     },
   },
 });

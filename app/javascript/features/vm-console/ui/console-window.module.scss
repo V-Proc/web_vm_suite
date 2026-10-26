@@ -1,0 +1,57 @@
+.console-window {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  background: #0f172a;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var(--border-color, #334155);
+  }
+
+  &__title {
+    color: var(--fg, #e2e8f0);
+    font-size: 0.9rem;
+  }
+
+  &__status {
+    font-size: 0.75rem;
+    color: var(--fg-muted, #94a3b8);
+  }
+
+  &__toolbar {
+    margin-left: auto;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__tool {
+    padding: 0.25rem 0.7rem;
+    border: 1px solid var(--border-color, #334155);
+    border-radius: 6px;
+    background: var(--bg-elevated, #1e293b);
+    color: var(--fg, #e2e8f0);
+    font-size: 0.8rem;
+    cursor: pointer;
+
+    &:hover {
+      background: var(--bg-hover, #334155);
+    }
+  }
+
+  &__screen {
+    flex: 1;
+  }
+
+  &__error {
+    margin: 0;
+    padding: 0 1rem 1rem;
+    color: #f87171;
+    font-size: 0.8rem;
+  }
+}

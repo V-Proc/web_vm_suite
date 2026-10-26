@@ -317,6 +317,7 @@ DEPENDENCIES
   tzinfo-data
   vite_rails
   web-console
+  websocket
 
 RUBY VERSION
    ruby 3.3.0p0

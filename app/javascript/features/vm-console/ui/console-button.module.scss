@@ -1,0 +1,11 @@
+.console-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &__error {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #f87171;
+  }
+}

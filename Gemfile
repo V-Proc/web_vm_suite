@@ -35,6 +35,8 @@ end
 gem "vite_rails"
 
 gem "minitest", "~> 5.25"
+
+gem "websocket"
 # gem "redis", ">= 4.0.1"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]

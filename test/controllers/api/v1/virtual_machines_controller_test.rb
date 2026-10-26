@@ -42,6 +42,20 @@ module Api
         end
       end
 
+      test "GET /console возвращает ws-url прокси" do
+        vm = virtual_machines(:nginx_alpha)
+        domain = FakeDomain.new(uuid: vm.libvirt_uuid, graphics_port: 5909)
+
+        with_fake_connection(FakeConnection.new(domain)) do
+          get console_api_v1_virtual_machine_path(vm), as: :json
+          assert_response :success
+          data = JSON.parse(response.body).fetch("data")
+          assert_equal "vnc", data["kind"]
+          assert_includes data["ws_url"], "port=5909"
+          assert_includes data["ws_url"], vm.libvirt_uuid
+        end
+      end
+
       test "DELETE удаляет VM при наличии домена" do
         vm = virtual_machines(:nginx_alpha)
         fake_domain = FakeDomain.new(uuid: vm.libvirt_uuid)

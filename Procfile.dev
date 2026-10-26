@@ -1,0 +1,3 @@
+web: bin/rails server -p 3000
+ws_proxy: bin/ws_proxy
+vite: bin/vite dev

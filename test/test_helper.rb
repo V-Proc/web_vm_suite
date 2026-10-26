@@ -12,8 +12,11 @@ module ActiveSupport
     class FakeDomain
       attr_reader :uuid, :actions
 
-      def initialize(uuid: "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee")
+      def initialize(uuid: "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee", graphics_port: 5900)
         @uuid = uuid
+        @graphics_port = graphics_port
+        @graphics_listen = nil
+        @graphics_type = "vnc"
         @actions = []
       end
 
@@ -33,9 +36,17 @@ module ActiveSupport
       def undefine
         actions << :undefine
       end
+
+      def graphics_address
+        @graphics ||= { type: @graphics_type || "vnc",
+                        listen: @graphics_listen || "0.0.0.0",
+                        port: @graphics_port || port }.compact
+      end
     end
 
-    class FakeConnection
+    require "test_helper"
+
+class FakeConnection
       def self.for(uuid: nil, domain_uuid: "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee")
         domain = uuid.nil? ? nil : FakeDomain.new(uuid: domain_uuid)
         new(domain)

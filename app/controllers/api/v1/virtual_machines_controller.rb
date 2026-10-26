@@ -4,7 +4,7 @@
 module Api
   module V1
     class VirtualMachinesController < ApplicationController
-      before_action :set_virtual_machine, only: %i[show start stop destroy]
+      before_action :set_virtual_machine, only: %i[show start stop destroy console]
 
       def index
         render json: { data: scoped_vms.map(&:summary) }
@@ -30,6 +30,16 @@ module Api
 
       def stop
         run_action Vms::StopService
+      end
+
+      def console
+        result = Vms::ConsoleService.new(virtual_machine: @virtual_machine).call
+
+        if result.success?
+          render json: { data: result.value }
+        else
+          render json: { errors: result.errors }, status: :unprocessable_content
+        end
       end
 
       def destroy

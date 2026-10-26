@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+require_relative "../config/environment"
+require_relative "../app/services/vms/ws_proxy/server"
+
+port = ENV.fetch("WS_PROXY_PORT", "3037").to_i
+Vms::WsProxy::Server.new(port: port, router: Vms::WsProxy::Router.new).run
