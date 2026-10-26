@@ -1,0 +1,19 @@
+.vm-config-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  border: 1px dashed var(--border-color, #334155);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+
+  &__name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--fg, #e2e8f0);
+  }
+
+  &__resources {
+    font-size: 0.8rem;
+    color: var(--fg-muted, #94a3b8);
+  }
+}

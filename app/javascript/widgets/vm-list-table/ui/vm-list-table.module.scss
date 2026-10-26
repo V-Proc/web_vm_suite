@@ -1,0 +1,10 @@
+.vm-list-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1rem;
+
+  &__empty {
+    color: var(--fg-muted, #94a3b8);
+    font-size: 0.9rem;
+  }
+}

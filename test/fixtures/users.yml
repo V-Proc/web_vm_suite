@@ -1,0 +1,11 @@
+alice:
+  workgroup: alpha
+  login: alice
+  display_name: Alice Algenson
+  role: admin
+
+bob:
+  workgroup: beta
+  login: bob
+  display_name: Bob Berson
+  role: member

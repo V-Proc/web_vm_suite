@@ -1,0 +1,18 @@
+.shared-button {
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--border-color, #334155);
+  border-radius: 6px;
+  background: var(--bg-elevated, #1e293b);
+  color: var(--fg, #e2e8f0);
+  cursor: pointer;
+  font-size: 0.85rem;
+
+  &:hover:not(:disabled) {
+    background: var(--bg-hover, #334155);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

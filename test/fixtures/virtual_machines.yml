@@ -1,0 +1,7 @@
+nginx_alpha:
+  workgroup: alpha
+  user: alice
+  virtual_machine_config: small
+  name: nginx-alpha
+  libvirt_uuid: 11111111-2222-3333-4444-555555555555
+  status: created

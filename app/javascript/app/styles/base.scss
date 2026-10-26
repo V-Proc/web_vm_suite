@@ -1,0 +1,18 @@
+:root {
+  --bg: #0f172a;
+  --bg-card: #1e293b;
+  --bg-elevated: #1e293b;
+  --bg-hover: #334155;
+  --border-color: #334155;
+  --fg: #e2e8f0;
+  --fg-muted: #94a3b8;
+}
+
+html {
+  background: var(--bg);
+  font-family: system-ui, sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}

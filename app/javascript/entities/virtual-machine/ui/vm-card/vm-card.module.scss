@@ -1,0 +1,47 @@
+.vm-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border: 1px solid var(--border-color, #334155);
+  border-radius: 8px;
+  background: var(--bg-card, #1e293b);
+  padding: 1rem 1.25rem;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 1.05rem;
+    color: var(--fg, #e2e8f0);
+  }
+
+  &__specs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.35rem 1rem;
+    margin: 0;
+  }
+
+  &__spec-name {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--fg-muted, #94a3b8);
+  }
+
+  &__spec-value {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--fg, #e2e8f0);
+  }
+
+  &__actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+  }
+}

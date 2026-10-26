@@ -1,0 +1,7 @@
+alpha:
+  name: alpha-team
+  description: Основная команда
+
+beta:
+  name: beta-team
+  description: Вторая команда

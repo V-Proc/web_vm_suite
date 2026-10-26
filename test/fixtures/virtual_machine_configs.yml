@@ -1,0 +1,13 @@
+small:
+  workgroup: alpha
+  name: small-box
+  cpu_cores: 2
+  ram_mb: 2048
+  disk_gb: 20
+
+big:
+  workgroup: alpha
+  name: big-box
+  cpu_cores: 8
+  ram_mb: 16384
+  disk_gb: 500

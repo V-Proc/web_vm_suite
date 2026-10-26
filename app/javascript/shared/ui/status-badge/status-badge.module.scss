@@ -1,0 +1,23 @@
+.status-badge {
+  display: inline-block;
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+
+  &--running {
+    background: rgba(74, 222, 128, 0.15);
+    color: #4ade80;
+  }
+
+  &--stopped {
+    background: rgba(248, 113, 113, 0.15);
+    color: #f87171;
+  }
+
+  &--created {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+  }
+}
